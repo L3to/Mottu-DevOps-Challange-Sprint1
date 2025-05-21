@@ -1,0 +1,7 @@
+## Para rodar no Azure CLI e obter o IP
+echo "Obtendo IP da VM 'sll-vm' no grupo 'rg-sll'..."
+vmip=$(az vm list-ip-addresses --resource-group "rg-sll" --name "sll-vm" --query "[0].virtualMachine.network.publicIpAddresses[0].ipAddress" --output tsv)
+echo "IP público da VM: $vmip"
+
+## Para rodar na máquina local, substituindo o vmip pelo resultado do echo anterior
+ssh "sllcomp@$vmip"

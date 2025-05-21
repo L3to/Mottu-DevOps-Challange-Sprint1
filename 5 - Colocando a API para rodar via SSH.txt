@@ -1,0 +1,10 @@
+## Executar tudo na máquina local conectado via SSH
+git clone https://github.com/lemos000/mottu-moto-api.git
+cd mottu-moto-api
+sudo usermod -aG docker sllcomp
+
+## Saia e entra da conexão para validar a adição ao grupo Docker
+exit
+ssh "sllcomp@$vmip"
+docker build -t mottu-image .
+docker container run -d -p 8080:8080 --name mottu-application mottu-image

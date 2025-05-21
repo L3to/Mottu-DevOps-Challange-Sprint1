@@ -1,0 +1,22 @@
+## Para rodar no azure CLI
+touch vmlinuxcreate.sh
+nano vmlinuxcreate.sh
+chmod 744 vmlinuxcreate.sh
+./vmlinuxcreate.sh
+
+## Variáveis
+grupox="rg-sll"&&
+locationx="brazilsouth"&&
+vmnamex="sll-vm"&&
+vmtypex="almalinux:almalinux-x86_64:9-gen2:latest"&&
+usuariox="sllcomp"&&
+senhax="sll123@2025SLL@"&&
+
+## Criação do Grupo de Serviços
+az group create --name $grupox --location $locationx &&
+## Dados da VM
+echo "Nome da VM:" $vmnamex &&
+echo "Imagem:" $vmtypex &&
+echo "Usuário:" $usuariox &&
+echo "Senha:" $senhax &&
+az vm create --resource-group $grupox --name $vmnamex --image $vmtypex --size Standard_B2s --admin-username $usuariox --admin-password $senhax
