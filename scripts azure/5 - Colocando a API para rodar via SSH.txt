@@ -7,4 +7,4 @@ sudo usermod -aG docker sllcomp
 exit
 ssh "sllcomp@$vmip"
 docker build -t mottu-image .
-docker container run -d -p 8080:8080 --name mottu-application mottu-image
+docker container run -d -p 8080:8080 -e DB_USERNAME=myuser -e DB_PASSWORD=mypass --name mottu-application mottu-image
