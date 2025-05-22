@@ -1,5 +1,5 @@
 ## Executar tudo na máquina local conectado via SSH
-git clone https://github.com/lemos000/mottu-moto-api.git
+git clone https://github.com/L3to/Mottu-DevOps-Challange-Sprint1.git
 sudo usermod -aG docker sllcomp
 
 ## Saia e entra da conexão para validar a adição ao grupo Docker
