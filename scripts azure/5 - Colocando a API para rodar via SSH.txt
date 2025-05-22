@@ -5,6 +5,6 @@ sudo usermod -aG docker sllcomp
 ## Saia e entra da conexão para validar a adição ao grupo Docker
 exit
 ssh "sllcomp@$vmip"
-cd mottu-moto-api
+cd Mottu-DevOps-Challange-Sprint1
 docker build -t mottu-image .
 docker container run -d -p 8080:8080 -e DB_USERNAME=myuser -e DB_PASSWORD=mypass --name mottu-application mottu-image
