@@ -1,8 +1,9 @@
 ## Para rodar no azure CLI
 touch vmlinuxcreate.sh
 nano vmlinuxcreate.sh
-chmod 744 vmlinuxcreate.sh
-./vmlinuxcreate.sh
+COPIE TUDO ISSO PARA O ARQUIVO
+---------------------------------------------
+#!/bin/bash
 
 ## Variáveis
 grupox="rg-sll"&&
@@ -20,3 +21,7 @@ echo "Imagem:" $vmtypex &&
 echo "Usuário:" $usuariox &&
 echo "Senha:" $senhax &&
 az vm create --resource-group $grupox --name $vmnamex --image $vmtypex --size Standard_B2s --admin-username $usuariox --admin-password $senhax
+---------------------------------------------
+chmod 744 vmlinuxcreate.sh
+./vmlinuxcreate.sh
+

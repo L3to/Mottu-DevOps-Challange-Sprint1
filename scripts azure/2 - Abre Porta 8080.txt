@@ -1,9 +1,8 @@
 ## Para rodar no azure CLI
 touch abrePorta.sh
 nano abrePorta.sh
-chmod 744 abrePorta.sh
-./abrePorta.sh
-
+COPIE TUDO ISSO PARA O ARQUIVO
+---------------------------------------------
 #!/bin/bash
 
 grupox="rg-sll"
@@ -15,3 +14,7 @@ prioridade=100
 az vm open-port --resource-group "$grupox" --name "$vmnamex" --port "$porta" --priority "$prioridade"
 
 echo "A porta $porta foi aberta com sucesso."
+---------------------------------------------
+chmod 744 abrePorta.sh
+./abrePorta.sh
+
